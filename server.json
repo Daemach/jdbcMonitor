@@ -1,0 +1,11 @@
+{
+    "app": {
+        "cfengine": "lucee@5.4"
+    },
+    "web": {
+        "http": {
+            "port": 8888
+        }
+    },
+    "openBrowser": false
+}

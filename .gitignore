@@ -12,8 +12,8 @@ testbox/
 .env
 .env.*
 
-# Server
-server.json
+# Server runtime (uncomment if server.json should not be tracked)
+# server.json
 
 # Runtime data
 data/persisted-settings.json
