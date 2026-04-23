@@ -116,22 +116,25 @@ jobs:
       - name: Setup CommandBox
         uses: Ortus-Solutions/setup-commandbox@v2.0.1
         with:
-          version: 6.3.1
+          version: 6.3.2
 
       - name: Install dependencies
         run: |
           box install
           box install commandbox-boxlang
-          box install bx-compat-cfml,bx-mysql --saveDev
           box config set verboseErrors=true
+
+      - name: Install BoxLang modules
+        run: |
+          box boxlang install-module bx-compat-cfml
+          box boxlang install-module bx-mysql
 
       - name: Initialize database
         run: mysql -h 127.0.0.1 -u root -proot < tests/sql/setup-mysql.sql
 
       - name: Start BoxLang server
         run: |
-          box server start cfengine=boxlang --debug
-          # Wait for BoxLang to be ready
+          box server start cfengine=boxlang port=8888 --noSaveSettings --debug
           for i in $(seq 1 30); do
             if curl -s http://127.0.0.1:8888/tests/runner.cfm?reporter=json > /dev/null 2>&1; then
               echo "Server is ready"
