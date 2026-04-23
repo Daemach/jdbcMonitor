@@ -11,8 +11,7 @@ component extends="tests.specs.BaseTest" {
 
 			beforeEach( function() {
 				resetStore();
-				application.__jdbcMonitorSettings.enabled = true;
-				application.__jdbcMonitorLastActivity = now().getTime();
+				initAppScope();
 				variables.store = getQueryStore();
 			} );
 
