@@ -122,12 +122,9 @@ jobs:
         run: |
           box install
           box install commandbox-boxlang
+          box install bx-compat-cfml
+          box install bx-mysql
           box config set verboseErrors=true
-
-      - name: Install BoxLang modules
-        run: |
-          box boxlang install-module bx-compat-cfml
-          box boxlang install-module bx-mysql
 
       - name: Initialize database
         run: mysql -h 127.0.0.1 -u root -proot < tests/sql/setup-mysql.sql
