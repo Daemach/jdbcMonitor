@@ -1,20 +1,20 @@
 {
-    "name": "jdbcMonitor",
-    "slug": "jdbcMonitor",
-    "version": "1.0.0",
-    "author": "John Wilson",
-    "location": "forgeboxStorage",
-    "homepage": "https://github.com/Daemach/jdbcMonitor",
-    "documentation": "https://github.com/Daemach/jdbcMonitor",
-    "repository": {
-        "type": "git",
-        "URL": "https://github.com/Daemach/jdbcMonitor"
+    "name":"jdbcMonitor",
+    "slug":"jdbcMonitor",
+    "version":"1.0.1",
+    "author":"John Wilson",
+    "location":"forgeboxStorage",
+    "homepage":"https://github.com/Daemach/jdbcMonitor",
+    "documentation":"https://github.com/Daemach/jdbcMonitor",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/Daemach/jdbcMonitor"
     },
-    "bugs": "https://github.com/Daemach/jdbcMonitor/issues",
-    "shortDescription": "JAMon-inspired JDBC query monitor dashboard for ColdBox",
-    "description": "A lightweight, drop-in JDBC query monitoring dashboard for ColdBox applications. Captures query history, execution times, errors, and slow queries in an in-memory ring buffer with a Vue+Quasar web UI. Supports Lucee (native query listener), ACF, and BoxLang (via qb interceptor).",
-    "type": "modules",
-    "keywords": [
+    "bugs":"https://github.com/Daemach/jdbcMonitor/issues",
+    "shortDescription":"JAMon-inspired JDBC query monitor dashboard for ColdBox",
+    "description":"A lightweight, drop-in JDBC query monitoring dashboard for ColdBox applications. Captures query history, execution times, errors, and slow queries in an in-memory ring buffer with a Vue+Quasar web UI. Supports Lucee (native query listener), ACF, and BoxLang (via qb interceptor).",
+    "type":"modules",
+    "keywords":[
         "jdbc",
         "monitor",
         "sql",
@@ -24,29 +24,29 @@
         "cfml",
         "debugging"
     ],
-    "license": [
+    "license":[
         {
-            "type": "MIT",
-            "URL": "https://opensource.org/licenses/MIT"
+            "type":"MIT",
+            "URL":"https://opensource.org/licenses/MIT"
         }
     ],
-    "contributors": [],
-    "dependencies": {},
-    "devDependencies": {
-        "testbox": "^5.0.0"
+    "contributors":[],
+    "dependencies":{},
+    "devDependencies":{
+        "testbox":"^5.0.0"
     },
-    "engines": {
-        "coldfusion": ">=2021",
-        "lucee": ">=5.3",
-        "boxlang": ">=1.0"
+    "engines":{
+        "coldfusion":">=2021",
+        "lucee":">=5.3",
+        "boxlang":">=1.0"
     },
-    "installPaths": {
-        "testbox": "testbox/"
+    "installPaths":{
+        "testbox":"testbox/"
     },
-    "testbox": {
-        "runner": "http://localhost:8888/tests/runner.cfm"
+    "testbox":{
+        "runner":"http://localhost:8888/tests/runner.cfm"
     },
-    "ignore": [
+    "ignore":[
         "**/.*",
         ".vscode/**",
         ".git/**",
