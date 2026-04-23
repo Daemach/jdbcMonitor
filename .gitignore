@@ -1,0 +1,19 @@
+# Dependencies
+modules/
+testbox/
+
+# IDE / tooling
+.vscode/
+.idea/
+.claude/
+.mcp.json
+
+# Environment
+.env
+.env.*
+
+# Server
+server.json
+
+# Runtime data
+data/persisted-settings.json
