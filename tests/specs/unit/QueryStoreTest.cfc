@@ -100,7 +100,7 @@ component extends="tests.specs.BaseTest" {
 					var page2 = store.getQueries( limit = 3, offset = 3 );
 					expect( page1 ).toHaveLength( 3 );
 					expect( page2 ).toHaveLength( 3 );
-					expect( page1[ 1 ].id ).toNotBe( page2[ 1 ].id );
+					expect( page1[ 1 ].id ).notToBe( page2[ 1 ].id );
 				} );
 
 			} );
